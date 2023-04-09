@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Slot</title>
+    <link rel="stylesheet" href="style_slot.css">
+    <script type="text/javascript">
+        const vett = ["images/uno.png", "images/due.png", "images/tre.png", "images/quattro.png", "images/cinque.png", "images/sei.png", "images/sette.png", "images/otto.png"];
+        function gira(){
+            let x = document.getElementById("crediti").innerHTML;
+            if(x > 0){
+                x--;
+                let num1 = Math.floor(Math.random() * 8);
+                let num2 = Math.floor(Math.random() * 8);
+                let num3 = Math.floor(Math.random() * 8);
+
+                document.getElementById("primo").src = vett[num1];
+                document.getElementById("secondo").src = vett[num2];
+                document.getElementById("terzo").src = vett[num3];
+
+                if(num1 == num2 && num1 == num3){
+                    x = x + (50 * (num1 + 1));
+                }
+                else if(num1 == num2 || num2 == num3){
+                    x = x + (20 * (num2 + 1));
+                }
+                else if(num1 == num3){
+                    x = x + (5 * (num1 + 1));
+                }
+
+                document.getElementById("crediti").innerHTML = x;
+            }
+            else{
+                alert("non hai abbastanza crediti");
+            }
+        }
+
+        function incassa(){
+            let x = document.getElementById("crediti").innerHTML;
+            alert("hai incassato " + x + " crediti");
+            document.getElementById("crediti").innerHTML = "10";
+        }
+    </script>
+</head>
+<body>
+    <table class="slot">
+        <tr class="numeri">
+            <td class="numero"><img id="primo" src = "images/uno.png" width="100px" height="100px"></td>
+            <td class="numero"><img id="secondo" src = "images/uno.png" width="100px" height="100px"></td>
+            <td class="numero"><img id="terzo" src = "images/uno.png" width="100px" height="100px"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button onclick="gira()">gira</button></td>
+            <td><button onclick="incassa()">incassa</button></td>
+        </tr>
+        <tr>
+            <td>Crediti -></td>
+            <td><p id="crediti">10</p></td>
+        </tr>
+    </table>
+</body>
+</html>

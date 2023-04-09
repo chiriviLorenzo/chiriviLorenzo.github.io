@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>tabella</title>
+    <script>
+        function funzione(){
+            if(document.scelta.nome.value == "pizza"){
+
+                const vett1 = document.getElementsByClassName("verdura");
+                for(let i = 0; i < vett1.length; i++){
+                    vett1[i].style.height = "0px";
+                    vett1[i].style.width = "0px";
+                }
+
+                const vett2 = document.getElementsByClassName("panino");
+                for(let i = 0; i < vett2.length; i++){
+                    vett2[i].style.height = "0px";
+                    vett2[i].style.width = "0px";
+                }
+
+
+                const pizze = ["images/pizza.jpg"];
+                document.getElementById("pizza0").src = pizze[0];
+                document.getElementById("pizza1").src = pizze[0];
+                document.getElementById("pizza2").src = pizze[0];
+                document.getElementById("pizza3").src = pizze[0];
+
+                const vett = document.getElementsByClassName("pizza");
+                for(let i = 0; i < vett.length; i++){
+                    vett[i].style.height = "100px";
+                    vett[i].style.width = "120px";
+                }
+
+            }
+            else if(document.scelta.nome.value == "verdura"){
+
+                const vett1 = document.getElementsByClassName("pizza");
+                for(let i = 0; i < vett1.length; i++){
+                    vett1[i].style.height = "0px";
+                    vett1[i].style.width = "0px";
+                }
+
+                const vett2 = document.getElementsByClassName("panino");
+                for(let i = 0; i < vett2.length; i++){
+                    vett2[i].style.height = "0px";
+                    vett2[i].style.width = "0px";
+                }
+
+                const verdure = ["images/verdure.jpg"];
+                document.getElementById("verdura0").src = verdure[0];
+                document.getElementById("verdura1").src = verdure[0];
+                document.getElementById("verdura2").src = verdure[0];
+                document.getElementById("verdura3").src = verdure[0];
+
+                const vett = document.getElementsByClassName("verdura");
+                for(let i = 0; i < vett.length; i++){
+                    vett[i].style.height = "100px";
+                    vett[i].style.width = "120px";
+                }
+            }
+            else if(document.scelta.nome.value == "panini"){
+
+                const vett1 = document.getElementsByClassName("pizza");
+                for(let i = 0; i < vett1.length; i++){
+                    vett1[i].style.height = "0px";
+                    vett1[i].style.width = "0px";
+                }
+
+                const vett2 = document.getElementsByClassName("verdura");
+                for(let i = 0; i < vett2.length; i++){
+                    vett2[i].style.height = "0px";
+                    vett2[i].style.width = "0px";
+                }
+
+                const panini = ["images/panino.jpg"];
+                document.getElementById("panino0").src = panini[0];
+                document.getElementById("panino1").src = panini[0];
+                document.getElementById("panino2").src = panini[0];
+                document.getElementById("panino3").src = panini[0];
+
+                const vett = document.getElementsByClassName("panino");
+                for(let i = 0; i < vett.length; i++){
+                    vett[i].style.height = "100px";
+                    vett[i].style.width = "120px";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="scelta">
+        scegli qualcosa
+        <select name="nome">
+            <option value="nessuna" selected></option>
+            <option value="pizza">pizza</option>
+            <option value="verdura">verdura</option>
+            <option value="panini">panini</option>
+        </select>
+    </form>
+    <table>
+        <tr>
+            <td><a href="images/pizza.jpg"><img class ="pizza" id="pizza0"></a></td>
+            <td><a href="images/pizza.jpg"><img class ="pizza" id="pizza1"></a></td>
+            <td><a href="images/pizza.jpg"><img class ="pizza" id="pizza2"></a></td>
+            <td><a href="images/pizza.jpg"><img class ="pizza" id="pizza3"></a></td>
+        </tr>
+        <tr>
+            <td><a href="images/verdura.jpg"><img class ="verdura" id="verdura0"></a></td>
+            <td><a href="images/verdura.jpg"><img class ="verdura" id="verdura1"></a></td>
+            <td><a href="images/verdura.jpg"><img class ="verdura" id="verdura2"></a></td>
+            <td><a href="images/verdura.jpg"><img class ="verdura" id="verdura3"></a></td>
+        </tr>
+        <tr>
+            <td><a href="images/panino.jpg"><img class ="panino" id="panino0"></a></td>
+            <td><a href="images/panino.jpg"><img class ="panino" id="panino1"></a></td>
+            <td><a href="images/panino.jpg"><img class ="panino" id="panino2"></a></td>
+            <td><a href="images/panino.jpg"><img class ="panino" id="panino3"></a></td>
+        </tr>
+    </table>
+    <button onclick="funzione()">click</button>
+
+
+</body>
+</html>

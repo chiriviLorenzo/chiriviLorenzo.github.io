@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <script>
+        //yyyy-mm-dd
+        function segnoZodiacale(){
+            const array = document.data.nome.value.split("-");
+            if(array[1] == "04"){
+                if(array[2] >= "1" && array[2] <= "20"){
+                    alert("ariete");
+                }
+                else{
+                    alert("toro");
+                }
+            }
+            else if(array[1] == "05"){
+                if(array[2] >= "1" && array[2] <= "20"){
+                    alert("toro");
+                }
+                else{
+                    alert("gemelli");
+                }
+            }
+            else if(array[1] == "06"){
+                if(array[2] >= "1" && array[2] <= "21"){
+                    alert("gemelli");
+                }
+                else{
+                    alert("cancro");
+                }
+            }
+            else if(array[1] == "07"){
+                if(array[2] >= "1" && array[2] <= "22"){
+                    alert("cancro");
+                }
+                else{
+                    alert("leone");
+                }
+            }
+            else if(array[1] == "08"){
+                if(array[2] >= "1" && array[2] <= "23"){
+                    alert("leone");
+                }
+                else{
+                    alert("vergine");
+                }
+            }
+            else if(array[1] == "09"){
+                if(array[2] >= "1" && array[2] <= "22"){
+                    alert("vergine");
+                }
+                else{
+                    alert("bilancia");
+                }
+            }
+            else if(array[1] == "10"){
+                if(array[2] >= "1" && array[2] <= "22"){
+                    alert("bilancia");
+                }
+                else{
+                    alert("scorpione");
+                }
+            }
+            else if(array[1] == "11"){
+                if(array[2] >= "1" && array[2] <= "22"){
+                    alert("scorpione");
+                }
+                else{
+                    alert("sagittario");
+                }
+            }
+            else if(array[1] == "12"){
+                if(array[2] >= "1" && array[2] <= "21"){
+                    alert("sagittario");
+                }
+                else{
+                    alert("capricorno");
+                }
+            }
+            else if(array[1] == "1"){
+                if(array[2] >= "1" && array[2] <= "20"){
+                    alert("capricorno");
+                }
+                else{
+                    alert("acquario");
+                }
+            }
+            else if(array[1] == "2"){
+                if(array[2] >= "1" && array[2] <= "19"){
+                    alert("acquario");
+                }
+                else{
+                    alert("pesci");
+                }
+            }
+            else if(array[1] == "3"){
+                if (array[2] >= "1" && array[2] <= "20"){
+                    alert("pesci");
+                }
+                else{
+                    alert("ariete");
+                }
+            } 
+        }
+    </script>
+</head>
+<body>
+    <button onclick="segnoZodiacale()">segno zodiacale</button>
+    <form name="data" onsubmit="return segnoZodiacale()">
+        data di nascita:
+        <input type="date" name="nome">
+        <input type="submit" value="invio!"><br>
+    </form>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_calcolatriceV3.css">
+    <title>Calcolatrice base</title>
+    <script src="CCalcolatrice.js"></script>
+
+</head>
+<body>
+    <div class="calculator">
+        <div class="display" id="uno"></div>
+        <button class="button" onclick="myCalc.clearDisplay()">C</button>
+        <button class="button" onclick="myCalc.addToDisplay('(')">(</button>
+        <button class="button" onclick="myCalc.addToDisplay(')')">)</button>
+        <button class="button operator" onclick="myCalc.operatorsClick('/')">÷</button>
+        <button class="button" onclick="myCalc.addToDisplay('7')">7</button>
+        <button class="button" onclick="myCalc.addToDisplay('8')">8</button>
+        <button class="button" onclick="myCalc.addToDisplay('9')">9</button>
+        <button class="button operator" onclick="myCalc.operatorsClick('*')">x</button>
+        <button class="button" onclick="myCalc.addToDisplay('4')">4</button>
+        <button class="button" onclick="myCalc.addToDisplay('5')">5</button>
+        <button class="button" onclick="myCalc.addToDisplay('6')">6</button>
+        <button class="button operator" onclick="myCalc.operatorsClick('-')">-</button>
+        <button class="button" onclick="myCalc.addToDisplay('1')">1</button>
+        <button class="button" onclick="myCalc.addToDisplay('2')">2</button>
+        <button class="button" onclick="myCalc.addToDisplay('3')">3</button>
+        <button class="button operator" onclick="myCalc.operatorsClick('+')">+</button>
+        <button class="button" onclick="myCalc.addToDisplay('0')">0</button>
+        <button class="button" onclick="myCalc.addToDisplay('.')">.</button>
+        <button class="button operator" id="enter" onclick="myCalc.calculate()">=</button>
+    </div>
+
+    <script>
+        const myCalc = new calcolatrice();
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Poligoni regolari</title>
+    <script type="text/javascript" language="javascript">
+        function calcola(){
+            let numeroLati, perimetro, lato, area, apotema;
+            if(document.area.figura.value == "triangolo"){
+                numeroLati = 3;
+                apotema = (lato * sqrt(3))/6;
+            }
+            else if(document.area.figura.value == "quadrato"){
+                numeroLati = 4;
+                apotema = lato / 2;
+            }
+            else if(document.area.figura.value == "pentagono"){
+                numeroLati = 5;
+                apotema = (lato / 2) * sqrt(5-2 * sqrt(5));
+            }
+            else if(document.area.figura.value == "esagono"){
+                numeroLati = 6;
+                apotema = (lato / 2) * sqrt(3);
+            }
+            
+            lato = Number(document.area.lato.value);
+            perimetro = numeroLati * lato;
+            
+            area = (perimetro * apotema) / 2;
+            return true;
+        }
+    </script>
+    </head>
+    <body>
+        <form name="area" onsubmit="return calcola()">
+            Figura:
+            <select name="figura">
+                <option value="triangolo">triangolo</option>
+                <option value="quadrato" selected>quadrato</option>
+                <option value="pentagono">pentagono</option>
+                <option value="esagono">esagono</option>
+            </select>
+            <br>
+            Misura del lato:
+            <input type="text" name="lato" size="5" maxlength="5">
+            <input type="submit" value="calcola">
+            <input type="reset" value="C">
+        </form>
+    </body>
+</html>
