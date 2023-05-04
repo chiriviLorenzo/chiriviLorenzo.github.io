@@ -13,9 +13,11 @@ h2{
     font-size:350%;
     border-radius: 10px;
     border:8px solid black;
-    margin: 0 auto;
+    margin-left: 220px;
     position: relative;
     display: inline-block;
+    padding-right: 150px;
+    padding-left: 150px;
 }
 .elements{
     font-size: 65%;
@@ -31,7 +33,6 @@ h2{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding-top: 15%;
-    margin: 0 auto;
     width: 45%;
 }
 a:link{
