@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Campo Minato</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="style-campo-minato.css">
+</head>
+<body>
+    <h1>Mine totali: 20</h1>
+    <script type="module" src="CCella.js"></script>
+    <script type="module" src="CCampo.js"></script>
+    <script type="module" src="script.js"></script>
+    <script>
+        $(document).ready(function(){
+            for (let riga = 0; riga < 10; riga++) {
+                for (let colonna = 0; colonna < 10; colonna++) {
+                    const cella = $("<div class='cella'></div>").attr("data-riga", riga).attr("data-colonna", colonna);
+                    $(".campo").append(cella);
+                }
+            }
+        });
+    </script>
+
+    <div class="header"></div>
+    <div class="campo"></div>
+</body>
+</html>

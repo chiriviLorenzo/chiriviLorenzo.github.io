@@ -1,0 +1,30 @@
+.cella{
+    border: 2px solid #333333;
+    margin: 3px;
+    border-radius: 5px;
+    background-color: #D8D8D8;
+    text-align: center;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.cella:hover{
+    background-color: #BDBDBD;
+}
+
+.campo{
+    display: grid;
+    grid-template-columns: repeat(10, 60px);
+    grid-template-rows: repeat(10, 60px);
+    margin-left: 33%;
+    background-image: none;
+}
+
+body{
+    background-color: #4CAF50;
+    text-align: center;
+}
+
+h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
